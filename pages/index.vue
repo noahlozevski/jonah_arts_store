@@ -1,31 +1,17 @@
-<template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        jonah_arts_store
-      </h1>
-      <h2 class="subtitle">
-        Jonah Arts Store
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+<template lang='pug'>
+  .container
+    div
+      logo
+      h1.title
+        | Jonah Arts
+      h2.subtitle
+        | Jonah Arts Store
+      .links
+        a.button--green(href='https://nuxtjs.org/' target='_blank')
+          | Documentation
+        a.button--grey(href='https://github.com/nuxt/nuxt.js' target='_blank')
+          | GitHub
+
 </template>
 
 <script>
@@ -49,8 +35,7 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Cooper Std', 'Arial Rounded MT Bold', 'Comic Sans', Helvetica, Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;

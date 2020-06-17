@@ -1,0 +1,1 @@
+"use strict";function getTitle(t){var e=t.$options.title;if(e)return"function"==typeof e?e.call(t):e}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var _default={created:function(){var t=getTitle(this);t&&(document.title=t)}};exports.default=_default;

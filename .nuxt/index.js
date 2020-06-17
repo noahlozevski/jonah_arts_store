@@ -11,7 +11,7 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_bootstrapvue_a4f93252 from 'nuxt_plugin_bootstrapvue_a4f93252' // Source: .\\bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_bootstrapvue_29e981d0 from 'nuxt_plugin_bootstrapvue_29e981d0' // Source: .\\bootstrap-vue.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -50,7 +50,7 @@ async function createApp (ssrContext) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"jonah_arts_store","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Jonah Arts Store"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+    head: {"title":"Jonah Arts","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"Jonah Arts","name":"Jonah Arts","content":"Jonah Arts Store\u002FPortfolio"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
 
     router,
     nuxt: {
@@ -150,8 +150,8 @@ async function createApp (ssrContext) {
 
   // Plugin execution
 
-  if (typeof nuxt_plugin_bootstrapvue_a4f93252 === 'function') {
-    await nuxt_plugin_bootstrapvue_a4f93252(app.context, inject)
+  if (typeof nuxt_plugin_bootstrapvue_29e981d0 === 'function') {
+    await nuxt_plugin_bootstrapvue_29e981d0(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first
