@@ -41,6 +41,8 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
+    // Doc: https://github.com/nuxt-community/svg-module
+    '@nuxtjs/svg',
   ],
   /*
   ** Build configuration
@@ -51,5 +53,8 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  bootstrapVue: {
+    icons: true // Install the IconsPlugin (in addition to BootStrapVue plugin
   }
 }
