@@ -29,5 +29,6 @@ export default {
 <style>
 .container {
     margin:0px;
+    z-index: 9999999;
 }
 </style>

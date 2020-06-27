@@ -43,6 +43,7 @@ export default {
     'bootstrap-vue/nuxt',
     // Doc: https://github.com/nuxt-community/svg-module
     '@nuxtjs/svg',
+    '@nuxtjs/device', // for device detection
   ],
   /*
   ** Build configuration
