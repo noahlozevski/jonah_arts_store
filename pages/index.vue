@@ -1,9 +1,13 @@
 <template lang='pug'>
-  //- .container-fluid(:style="{cursor: selectedCursor}")
   .container-fluid
     div
+      .logo
+        hoverable-image(:mouseOn="'svg/logo-selected.svg'", :mouseOff="'svg/logo.svg'")
+    
+    footer-image
+    //- img.footer(src="~/assets/svg/footerImg.svg")
       //- nuxt-link(to="/about")
-      .logo(@mouseover="selected()" @mouseleave="unselected()")
+      //- .logo(@mouseover="selected()" @mouseleave="unSelected()")
         template(v-if="hovered")
           img(src="~/assets/svg/logo-selected.svg")
         template(v-else)
@@ -18,7 +22,6 @@
       //-   a.button--grey(href='https://github.com/nuxt/nuxt.js' target='_blank')
       //-     | GitHub
       //- p some text
-    img.footer(src="~/assets/svg/landing-page-bottom.svg")
       
 
       //- div(v-html="rawLogo")
@@ -29,25 +32,31 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue';
+// import Logo from '~/components/Logo.vue';
 // import BottomBar from '~/assets/svg/landing-page-bottom.svg';
 // import rawLogo from "~/assets/svg/landing-page-bottom.svg?raw";
+
+
+
+import HoverableImage from '~/components/hoverable-image';
+import FooterImage from '~/components/footer-image';
 
 export default {
   components: {
     // Logo,
     // BottomBar
+    HoverableImage,
+    FooterImage
   },
   data () {
     return { 
       hovered: { type: Boolean, default: false },
-      selectedCursor: `url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24pt' height='24pt' viewBox='0 0 24 24' version='1.1'%3E%3Cg id='surface1'%3E%3Cpath style='fill-rule:evenodd;fill:rgb(100%25,100%25,100%25);fill-opacity:1;stroke-width:7.94;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(13.72549%25,12.156863%25,12.54902%25);stroke-opacity:1;stroke-miterlimit:10;' d='M 73.093906 23.936016 L 5.644072 5.642451 L 24.456797 75.045967 L 41.766689 56.861699 L 63.216201 78.324873 L 78.053252 63.47416 L 56.234863 41.655771 Z M 73.093906 23.936016 ' transform='matrix(0.285919,0,0,0.285919,0.038599,0)'/%3E%3C/g%3E%3C/svg%3E"), auto`,
       // rawLogo,
     };
   },
   methods: {
     selected () { this.hovered = true; },
-    unselected () { this.hovered = false; }
+    unSelected () { this.hovered = false; }
   }
 };
 
@@ -149,18 +158,4 @@ export default {
         position: relative;
         margin: auto;
 }
-.footer {
-  animation-delay: 1s;
-  animation: 3s appear;
-  /* animation-fill-mode: backwards; */
-  position: absolute;
-  bottom:0;
-  /* width:100%; */
-  /* height:35%; */
-  padding:0;
-  z-index: 0;
-  width: 65vw;
-  /* animation-duration: 3s; */
-  /* min-width: 45vw; */
-} 
 </style>
