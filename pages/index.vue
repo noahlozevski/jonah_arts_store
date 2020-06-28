@@ -2,38 +2,27 @@
   .container-fluid
     .logo(:style="{ top: logoPosition }")
       hoverable-image(:mouseOn="'svg/logo-selected.svg'", :mouseOff="'svg/logo.svg'")
-    div
-      | {{windowHeight}} {{ $device.isDesktop }}
     footer-image
 
 </template>
 
 <script>
-// import Logo from '~/components/Logo.vue';
-// import BottomBar from '~/assets/svg/landing-page-bottom.svg';
-// import rawLogo from "~/assets/svg/landing-page-bottom.svg?raw";
-
-// $device.isDesktop or $device.isMobile for device differences
-
 import HoverableImage from '~/components/hoverable-image';
 import FooterImage from '~/components/footer-image';
-import { vueWindowSizeMixin } from 'vue-window-size';
-
+// import { vueWindowSizeMixin } from 'vue-window-size';
+import WindowDimensions from '~/components/mixins/dist/window-dimensions'
 
 export default {
   components: {
-    // Logo,
-    // BottomBar
     HoverableImage,
     FooterImage
   },
 
-  mixins: [vueWindowSizeMixin],
+  mixins: [WindowDimensions],
 
   data () {
     return { 
       hovered: { type: Boolean, default: false },
-      // rawLogo,
     };
   },
   methods: {
