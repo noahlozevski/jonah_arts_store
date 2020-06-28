@@ -11,9 +11,9 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_libplugin1d992ca8_2b97acb2 from 'nuxt_plugin_libplugin1d992ca8_2b97acb2' // Source: .\\lib.plugin.1d992ca8.js (mode: 'all')
-import nuxt_plugin_bootstrapvue_29e981d0 from 'nuxt_plugin_bootstrapvue_29e981d0' // Source: .\\bootstrap-vue.js (mode: 'all')
-import nuxt_plugin_vgallery_68f36992 from 'nuxt_plugin_vgallery_68f36992' // Source: ..\\plugins\\v-gallery.js (mode: 'client')
+import nuxt_plugin_libplugin3cc6fad3_42bf568c from 'nuxt_plugin_libplugin3cc6fad3_42bf568c' // Source: ./lib.plugin.3cc6fad3.js (mode: 'all')
+import nuxt_plugin_bootstrapvue_076e5538 from 'nuxt_plugin_bootstrapvue_076e5538' // Source: ./bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_vgallery_68f36992 from 'nuxt_plugin_vgallery_68f36992' // Source: ../plugins/v-gallery.js (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -152,12 +152,12 @@ async function createApp (ssrContext) {
 
   // Plugin execution
 
-  if (typeof nuxt_plugin_libplugin1d992ca8_2b97acb2 === 'function') {
-    await nuxt_plugin_libplugin1d992ca8_2b97acb2(app.context, inject)
+  if (typeof nuxt_plugin_libplugin3cc6fad3_42bf568c === 'function') {
+    await nuxt_plugin_libplugin3cc6fad3_42bf568c(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_bootstrapvue_29e981d0 === 'function') {
-    await nuxt_plugin_bootstrapvue_29e981d0(app.context, inject)
+  if (typeof nuxt_plugin_bootstrapvue_076e5538 === 'function') {
+    await nuxt_plugin_bootstrapvue_076e5538(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_vgallery_68f36992 === 'function') {

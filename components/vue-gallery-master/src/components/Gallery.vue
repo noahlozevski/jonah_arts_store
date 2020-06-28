@@ -139,7 +139,7 @@ function allocationPosition(index) {
 	centerImageFigures[0] = {
 		left: centerPosition.left,
 		top: centerPosition.top,
-		rotate: Math.random() >=.5 ? Math.random()*10 : Math.random()*-10,
+		rotate: 0,
 		center: true,
 		inverse: false
 	}

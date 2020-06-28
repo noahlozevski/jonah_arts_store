@@ -33,7 +33,7 @@ export default {
 			}
 			if(position.center === true) styleObject.zIndex = 101;
 
-			this.className = "gallery-figure" + (position.inverse === true ? " inverse" : "");
+			this.className = "gallery-figure" + (position.inverse == true ? " inverse" : "");
 			return styleObject;
 		}
 	},

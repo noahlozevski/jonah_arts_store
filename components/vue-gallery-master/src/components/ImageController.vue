@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import inverseSrc from "../assets/inverse.svg"
+import inverseSrc from "~/components/vue-gallery-master/src/assets/inverse.svg"
 
 export default {
 	name: "imageController",

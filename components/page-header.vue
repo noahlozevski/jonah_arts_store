@@ -1,8 +1,9 @@
 <template lang='pug'>
-  div
-    nuxt-link(to="/")
-      hoverable-image.logo(:mouseOn="'svg/logo-selected.svg'", :mouseOff="'svg/logo.svg'")
-    button-row.button-row
+  div.myspecialcontainer
+    nuxt-link.mainlogo(to="/")
+      hoverable-image(:mouseOn="'svg/logo-selected.svg'", :mouseOff="'svg/logo.svg'")
+    .button-row
+      button-row
 
 
 </template>
@@ -29,16 +30,46 @@ export default {
 }
 </script>
 
-<style scoped>
-.logo {
-  width: 22vw;
-  left: 8vw;
-  top: 5vh;
+<style>
+.myspecialcontainer {
+  /* width: 100%; */
+  width: 100vw;
+  min-width: 850px;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* min-height: 120px;
+  max-height: 130px; */
 }
+
+.mainlogo {
+  position: absolute;
+  width: 22%;
+  left: 7vw;
+  /* height: 10px; */
+  /* top: 0vh; */
+  top: 60%;
+  height: 100%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  /* bottom: 0vh; */
+  /* max-height: 20vh; */
+}
+
 .button-row {
-  left: 66vw;
-  top: 9.5vh;
-  height: 20vh;
+  position: absolute;
+  right: 7vw;
+  height: 100%;
+  width: 35vw;
+  min-width: 425px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  /* height: 20vh;
+  min-height: 120px; */
+  
+  /* height: 20vh; */
 }
 
 </style>

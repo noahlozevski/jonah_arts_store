@@ -1,7 +1,7 @@
 <template lang='pug'>
   div
     page-header.header
-    gallery.gallery
+    //- gallery.gallery
 
     //- row.gallery
     //-   v-gallery(:images="list")
@@ -54,24 +54,31 @@ export default {
 
 </script>
 
-<style scoped>
+<style>
 .div {
   width: 100%;
   width: 100vw;
   height: 100%;
-  height: 100vh;
+  height: 100vh; /* div is full page */
+  position: relative
 }
 .header {
-  position: relative;
-  top: 0vh;
+  position: absolute;
+  top: 0; /* make this have a maximum height and a min */
+  left: 0;
+  height: 120px;
+  width: 100%;
+  /* text-align: center; */
 }
+
+
 .gallery {
   position:absolute;
   /* z-index:99999999; */
   width: 76vw;
   left: 12vw;
   height: 65vh;
-  top: 25vh;
+  top: 20%;
   background-color:#FF73A7;
   border-width: 5px;
   border-color: black;
