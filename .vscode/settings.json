@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/Users/noahlozevski/opt/anaconda3/envs/hand_tracking/bin/python"
+    "python.pythonPath": "/Users/noahlozevski/opt/anaconda3/envs/hand_tracking/bin/python",
+    "git.ignoreLimitWarning": true
 }

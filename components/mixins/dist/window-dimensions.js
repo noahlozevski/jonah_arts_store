@@ -14,7 +14,7 @@ export default {
 
   computed: {
     deviceStatus() { // holds a computed property of the dimensions of the window, device type, and orientation (if applicable)
-      return new deviceType($device.isMobile ? 'mobile':'desktop', windowWidth, windowHeight, (windowHeight>windowWidth) ? 'portrait' : 'landscape'); 
+      return new deviceType(this.$device.isMobile ? 'mobile':'desktop', this.windowWidth, this.windowHeight, (this.windowHeight>this.windowWidth) ? 'portrait' : 'landscape'); 
     }
   }
 };

@@ -1,15 +1,15 @@
 <template lang='pug'>
-  .container-fluid
-    .logo(:style="{ top: logoPosition }")
-      hoverable-image(:mouseOn="'svg/logo-selected.svg'", :mouseOff="'svg/logo.svg'")
-    footer-image
+  div.text-center
+    div.logo
+      nuxt-link(id="logo" to="/gallery")
+        hoverable-image.image(:mouseOn="'svg/logo-selected.svg'", :mouseOff="'svg/logo.svg'")
+    footer-image.footer(:animationDelay="1" :timeToShow="2")
 
 </template>
 
 <script>
 import HoverableImage from '~/components/hoverable-image';
 import FooterImage from '~/components/footer-image';
-// import { vueWindowSizeMixin } from 'vue-window-size';
 import WindowDimensions from '~/components/mixins/dist/window-dimensions'
 
 export default {
@@ -23,11 +23,34 @@ export default {
   data () {
     return { 
       hovered: { type: Boolean, default: false },
+      isLoading: { type: Boolean, default: false },
+      bullshit: {}
     };
   },
+
   methods: {
     selected () { this.hovered = true; },
-    unSelected () { this.hovered = false; }
+
+    unSelected () { this.hovered = false; },
+
+    getBox () {
+      var rect = document.getElementById('logo').getBoundingClientRect();
+      return {
+        top: rect.top,
+        right: rect.right,
+        bottom: rect.bottom,
+        left: rect.left,
+        width: rect.width,
+        height: rect.height,
+        x: rect.x,
+        y: rect.y
+      };
+    }
+  },
+
+  mounted () {
+    this.isLoading = false;
+    this.bullshit = this.getBox();
   },
   computed: {
     logoPosition() {
@@ -39,10 +62,22 @@ export default {
 </script>
 
 <style>
-.div {
-  height: 100vh;
+
+.mycontainer {
+  /* height: 100vh;
+  height: 100%;
   width: 100vw;
+  width: 100%; */
 }
+/* .div {
+  height: 100vh;
+  height: 100%;
+  width: 1200px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} */
+
 .container-fluid {
   margin: 0 auto;
   height: 100vh;
@@ -54,59 +89,37 @@ export default {
   align-items: center;
   text-align: center;
   background-color: #ffa3ff;
-
+}
+.welcome {
+  
 }
 
 .logo {
   animation: 3s appear;
+  /* min-width: 30%; */
+  width: 45vw;
+  position: absolute;
+  top: 25vh;
+  left: 27.5vw;
+  /* left: 0vw; */
+  z-index: 999;
+  background-color:#ffa3ff;
+
+}
+/* .logo {
+  animation: 3s appear;
   min-width: 30%;
-  min-width: 45vw;
+  width: 45vw;
   position: relative;
   top: 25vh;
-  z-index: 99999999;
-}
+  left: 27.5vw;
+  left: 0vw;
+  z-index: 999;
+  background-color:#ffa3ff;
 
-
-.title {
-  font-family: 'Cooper Std', 'Arial Rounded MT Bold', 'Comic Sans', Helvetica, Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-.wide {
-  width: 100%;
-}
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.sticky-image-wrapper{
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-
-.sticky-image-wrapper--image{
-        display: table;
-        position: relative;
-        margin: auto;
+} */
+.footer {
+  left: 17.5vw;
+  z-index:9999;
 }
 </style>

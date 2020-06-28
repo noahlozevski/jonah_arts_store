@@ -13,7 +13,7 @@ export default {
       { hid: 'Jonah Arts', name: 'Jonah Arts', content: 'Jonah Arts Store/Portfolio' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/ball_favicon.png' }
     ]
   },
   /*
@@ -29,6 +29,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src:'~/plugins/v-gallery.js', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -40,7 +41,8 @@ export default {
   */
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt',
+    // 'bootstrap-vue/nuxt',
+    '@nuxtjs/bootstrap-vue',
     // Doc: https://github.com/nuxt-community/svg-module
     '@nuxtjs/svg',
     '@nuxtjs/device', // for device detection
