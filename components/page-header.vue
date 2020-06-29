@@ -59,10 +59,10 @@ export default {
 
 .button-row {
   position: absolute;
-  right: 7vw;
+  right: 5vw;
   height: 100%;
   width: 35vw;
-  min-width: 425px;
+  min-width: 435px;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);

@@ -62,6 +62,14 @@ export default {
   mounted () {
     this.isLoading = false;
     this.bullshit = this.getBox();
+    // let vh = window.innerHeight * 0.01;
+    //   // Then we set the value in the --vh custom property to the root of the document
+    // document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // window.addEventListener('resize', () => {
+    //   // We execute the same script as before
+    //   let vh = window.innerHeight * 0.01;
+    //   document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // });
   },
   computed: {
     logoPosition() {
@@ -101,6 +109,7 @@ export default {
 
 .div {
   height: 100vh;
+  /* height: calc(var(--vh, 1vh) * 100); */
   width: 100vw;
 }
 

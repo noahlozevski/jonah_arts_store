@@ -25,6 +25,7 @@
     "pug-plain-loader": "^1.0.0",
     "style-loader": "^1.2.1",
     "v-gallery": "^1.2.4",
+    "vue-100vh": "^0.1.1",
     "vue-window-size": "^0.2.5",
     "yarn": "^1.22.4"
   },

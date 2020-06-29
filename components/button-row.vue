@@ -47,6 +47,7 @@ export default {
 .rowcontainer {
   position: relative;
   width: 100%;
+  max-width: 600px;
   height: 100%;
 }
 
@@ -89,7 +90,7 @@ figure {
 .fcontainer5 {
   display: table-cell;
   /* vertical-align: middle; */
-  left: 82%;
+  left: 83%;
   top: -4px;
   
   /* height: 5.5vh; */

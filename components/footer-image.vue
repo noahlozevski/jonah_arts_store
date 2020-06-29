@@ -39,7 +39,7 @@ export default {
   /* animation: 3s appear; */
   /* animation-fill-mode: backwards; */
   position: relative;
-  bottom:0;
+  bottom:0vh;
   left: 0;
   height: 100vh;
   
